@@ -359,6 +359,32 @@
 
       // Add more prank actions here, like animations or unexpected events
   }
+
+  function triggerPrank1() {
+            var confirmation = confirm("Do you want to proceed to reveal another surprise ?");
+
+            if (confirmation) {
+                window.location.href = "https://someswar735.itch.io/literally-anything";
+            } else {
+                window.location.href = "https://www.websiteB.com";
+            }
+        
+            var messages = [
+                "Oops! You've been pranked!",
+                "Surprise! That was a prank!",
+                "Ha! Gotcha! Pranked again!",
+                "Expect the unexpected! Pranked!",
+                "Haha! You fell for it! Pranked!"
+            ];
+
+            var randomIndex = Math.floor(Math.random() * messages.length);
+            var prankMessage = messages[randomIndex];
+
+            alert(prankMessage);
+            setTimeout(triggerPrank1, 1000);
+
+            // Add more prank actions here, like animations or unexpected events
+        }
 </script>
 
   <div class="jumbotron">
@@ -496,6 +522,8 @@
         <div class="surprise-section">
           <h2>Click the button for a surprise!</h2>
           <button class="surprise-button" onclick="triggerPrank()">Surprise!</button>
+          <button class="surprise-button" onclick="triggerPrank1()">Click Me to Prank</button>
+
       </div>
 
         <div class="section">
