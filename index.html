@@ -302,10 +302,28 @@
   background-color: #45a049;
 }
 
-
-
-
+.surprise-section {
+            background-color: #f7f7f7;
+            padding: 20px;
+            text-align: center;
+        }
+        .surprise-button {
+            font-size: 24px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
   </style>
+
+<script>
+  function revealSurprise() {
+      var surpriseElement = document.getElementById("surprise-content");
+      surpriseElement.style.display = "block";
+  }
+</script>
+
 </head>
 
 <body>
@@ -314,6 +332,33 @@
     function showAlert() {
         alert("Redirecting To  Whatsapp");
     }
+</script>
+<script>
+  function triggerPrank() {
+      var confirmation = confirm("Do you want to proceed to **** website ?");
+
+      if (confirmation) {
+          window.location.href = "https://pranx.com/win10-update/";
+      } else {
+          window.location.href = "https://www.websiteB.com";
+      }
+  
+      var messages = [
+          "Oops! You've been pranked!",
+          "Surprise! That was a prank!",
+          "Ha! Gotcha! Pranked again!",
+          "Expect the unexpected! Pranked!",
+          "Haha! You fell for it! Pranked!"
+      ];
+
+      var randomIndex = Math.floor(Math.random() * messages.length);
+      var prankMessage = messages[randomIndex];
+
+      alert(prankMessage);
+      setTimeout(triggerPrank, 1000);
+
+      // Add more prank actions here, like animations or unexpected events
+  }
 </script>
 
   <div class="jumbotron">
@@ -448,6 +493,25 @@
         <br>
         <br>
 
+        <div class="surprise-section">
+          <h2>Click the button for a surprise!</h2>
+          <button class="surprise-button" onclick="triggerPrank()">Surprise!</button>
+      </div>
+
+        <div class="section">
+          <div class="section-heading">
+            <h2>Contact us</h2>
+          </div>
+          <div class="section-content">
+            <p>If you would like to send your wishes or get in touch with us, feel free to contact us &#128516;</p>
+            <a href="https://wa.me/9951904116" target="_blank">
+              <button onclick="showAlert()" class="green-button">Get In Touch With Us In Whatsapp</button>
+            </a>
+                 
+          </div>
+        </div>
+      </div>
+
         <footer>
           <div class="closing-card">
             <div class="card-content">
@@ -459,20 +523,6 @@
           </div>
         </footer>
         
-
-    <div class="section">
-      <div class="section-heading">
-        <h2>Contact us</h2>
-      </div>
-      <div class="section-content">
-        <p>If you would like to send your wishes or get in touch with us, feel free to contact us &#128516;</p>
-        <a href="https://wa.me/9951904116" target="_blank">
-          <button onclick="showAlert()" class="green-button">Get In Touch With Us In Whatsapp</button>
-        </a>
-             
-      </div>
-    </div>
-  </div>
   <script src="C:\Users\PRINC\OneDrive\Desktop\Happy Birthday\dhanesh1.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
